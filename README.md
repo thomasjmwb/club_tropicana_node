@@ -1,10 +1,35 @@
+
+done
+- create .env file and copy .env.example into it, and change `dotenv.load({ path: '.env.example' });` to `dotenv.load({ path: '.env' });`
+- get google oauth hooked up via instructions below
+- get github repo setup
+- sign up for mongodb free instance via https://mlab.com
+- get heroku deploy working
+- get mongo db hooked up
+ - add mongodb mlab plugin to heroku deploy
+ - mongodb can be manually set via setting environmental variable
+- get deployed to heroku
+- get deployment working and using correct api keys etc
+  - following https://devcenter.heroku.com/articles/config-vars for google api
+  - looks like this:
+    >heroku config:set GOOGLE_ID=xxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com
+    Setting GOOGLE_ID and restarting club-tropicana-node... done, v6
+    GOOGLE_ID: xxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com
+
+    >heroku config:set GOOGLE_SECRET=xxxxxxxxxxxxxxxxxxxxx
+    Setting GOOGLE_SECRET and restarting club-tropicana-node... done, v7
+    GOOGLE_SECRET: xxxxxxxxxxxxxxxxxxxxx
+
+
+todo
+
+
+
 ![](https://lh4.googleusercontent.com/-PVw-ZUM9vV8/UuWeH51os0I/AAAAAAAAD6M/0Ikg7viJftQ/w1286-h566-no/hackathon-starter-logo.jpg)
 Hackathon Starter 
 =======================
 
 [![Dependency Status](https://david-dm.org/sahat/hackathon-starter/status.svg?style=flat)](https://david-dm.org/sahat/hackathon-starter) [![Build Status](https://travis-ci.org/sahat/hackathon-starter.svg?branch=master)](https://travis-ci.org/sahat/hackathon-starter) [![Join the chat at https://gitter.im/sahat/hackathon-starter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/sahat/hackathon-starter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Thinkful Pair on Node](https://tf-assets-staging.s3.amazonaws.com/badges/thinkful_repo_badge.svg)](http://start.thinkful.com/node/)
-
-**Live Demo**: http://hackathonstarter-sahat.rhcloud.com
 
 Jump to [What's new in 4.3.0?](#changelog)
 
@@ -23,31 +48,7 @@ I also tried to make it as **generic** and **reusable** as possible to cover mos
 without being too specific. In the worst case you can use this as a learning guide for your projects,
 if for example you are only interested in **Sign in with Google** authentication and nothing else.
 
-### Testimonials
 
-> [**“Nice! That README alone is already gold!”**](https://www.producthunt.com/tech/hackathon-starter#comment-224732)<br>
-> — Adrian Le Bas
-
-> [**“Awesome. Simply awesome.”**](https://www.producthunt.com/tech/hackathon-starter#comment-224966)<br>
-> — Steven Rueter
-
-> [**“I'm using it for a year now and many projects, it's an awesome boilerplate and the project is well maintained!”**](https://www.producthunt.com/tech/hackathon-starter#comment-228610)<br>
-> — Kevin Granger
-
-> **“Small world with Sahat's project. We were using his hackathon starter for our hackathon this past weekend and got some prizes. Really handy repo!”**<br>
-> — Interview candidate for one of the companies I used to work with.
-
-<h4 align="center">Modern Theme</h4>
-
-![](https://lh6.googleusercontent.com/-KQTmCFNK6MM/U7OZpznjDuI/AAAAAAAAERc/h3jR27Uy1lE/w1366-h1006-no/Screenshot+2014-07-02+01.32.22.png)
-
-<h4 align="center">Flatly Bootstrap Theme</h4>
-
-![](https://lh5.googleusercontent.com/-oJ-7bSYisRY/U1a-WhK_LoI/AAAAAAAAECM/a04fVYgefzw/w1474-h1098-no/Screen+Shot+2014-04-22+at+3.08.33+PM.png)
-
-<h4 align="center">API Examples</h4>
-
-![](https://lh5.googleusercontent.com/-BJD2wK8CvC8/VLodBsyL-NI/AAAAAAAAEx0/SafE6o_qq_I/w1818-h1186-no/Screenshot%2B2015-01-17%2B00.25.49.png)
 
 Table of Contents
 -----------------
@@ -122,16 +123,13 @@ The easiest way to get started is to clone the repository:
 
 ```bash
 # Get the latest snapshot
-git clone --depth=1 https://github.com/sahat/hackathon-starter.git myproject
+git clone git@github.com:thomasjmwb/club_tropicana_node.git
 
 # Change directory
-cd myproject
+cd club_tropicana_node
 
 # Install NPM dependencies
 npm install
-
-# Or, if you prefer to use `yarn` instead of `npm`
-yarn install
 
 # Then simply start your app
 node app.js
