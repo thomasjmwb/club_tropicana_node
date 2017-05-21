@@ -22,7 +22,10 @@ done
 
 
 todo
-
+- prune stuff we arnt going to use
+- create user model in db
+- create a form that will post the user model
+- create a page that will read user model
 
 
 ![](https://lh4.googleusercontent.com/-PVw-ZUM9vV8/UuWeH51os0I/AAAAAAAAD6M/0Ikg7viJftQ/w1286-h566-no/hackathon-starter-logo.jpg)
